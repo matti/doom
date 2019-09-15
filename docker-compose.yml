@@ -1,0 +1,14 @@
+version: "3.4"
+
+services:
+  doom:
+    build: .
+    volumes:
+      - ./app:/app
+    networks:
+      - x_default
+
+networks:
+  x_default:
+    external:
+      name: x_default
